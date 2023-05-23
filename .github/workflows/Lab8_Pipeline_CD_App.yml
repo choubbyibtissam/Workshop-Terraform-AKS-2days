@@ -30,7 +30,7 @@ jobs:
           
       - name: creation du secret
         run: |
-          cd kubernetes/Manifests/coolapi
+          cd Kubernetes/Manifests/coolapi
           kubectl apply -f 1_namespace.yml
           kubectl create secret docker-registry "acr-secret" \
           --namepace "coolapi" \
