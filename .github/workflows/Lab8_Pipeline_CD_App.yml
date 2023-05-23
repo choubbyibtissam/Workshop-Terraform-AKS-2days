@@ -32,11 +32,11 @@ jobs:
         run: |
           cd Kubernetes/Manifests/coolapi
           kubectl apply -f 1_namespace.yml
-          kubectl create secret docker-registry "acr-secret" \ 
-            --namespace="coolapi" \
-            --docker-server="acribtissam.azurecr.io" \ 
-            --docker-username="acribtissam" \
-            --docker-password="mS9gOa/nAor540ohnsSHAHj5l5oY0Nh/E0nVso99PH+ACRA5DOiE"
+          kubectl create secret docker-registry "acr-secret" \
+          --namespace="coolapi" \
+          --docker-server="acribtissam.azurecr.io" \
+          --docker-username="acribtissam" \
+          --docker-password="mS9gOa/nAor540ohnsSHAHj5l5oY0Nh/E0nVso99PH+ACRA5DOiE"
 
       - name: Deploiement application dans AKS
         run: |      
